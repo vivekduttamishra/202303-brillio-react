@@ -1,0 +1,23 @@
+{
+  "name": "hello-npm",
+  "version": "1.0.0",
+  "description": "This is a simple npm test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "magic":"echo Magic Happens!",
+    "start":"echo we will start your project now",
+    "build":"echo we will build your project",
+    "clean":"rd node_modules /s/q"
+
+  },
+  "author": "Vivek Dutta Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
