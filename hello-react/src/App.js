@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { HomeScreen } from "./screens/home-screen.component"
+import AppHeader from './components/app-header.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+var books=[
+    {title:'The Accursed God',author:'Vivek Dutta Mishra'},
+    {title:'Rashmirathi',author:'Ramdhari Sing Dinkar'},
+    
+    {title:'Manas',author:'Vivek Dutta Mishra'},
+    {title:'Kurukshetra',author:'Ramdhari Sing Dinkar'},
+    
+
+];
+
+var App = () => {
+    return <div>
+        <AppHeader title='World Wide Books' 
+                slogan='Official Home Page of all books of the world' 
+                />
+        <HomeScreen books={books} />
+    </div>;
+};
 
 export default App;

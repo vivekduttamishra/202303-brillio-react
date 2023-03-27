@@ -1,0 +1,34 @@
+.app-header{
+    border-bottom: 2px solid teal;
+}
+
+.app-header h1{
+    color:teal;
+}
+
+.app-body{
+ margin:10px;   
+}
+
+.game{
+    border:2px solid red;
+    
+}
+
+.move-list-container, .board-container{
+    float:left;
+    width:50%;
+}
+
+.board{
+     width:240px; 
+    
+}
+
+.cell{
+    min-width: 80px;
+    max-width:80px;
+    min-height: 80px;    
+    max-height: 80px;
+    background-color:white;
+}
