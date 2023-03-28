@@ -4,6 +4,7 @@
 
 .app-header h1{
     color:teal;
+    
 }
 
 .app-body{
@@ -11,7 +12,7 @@
 }
 
 .game{
-    border:2px solid red;
+    /* border:2px solid red; */
     
 }
 
