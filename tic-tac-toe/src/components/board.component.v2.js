@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import Cell from './cell.component';
 
-class _Board extends Component {
+class Board extends Component {
     
     constructor(props){
         super(props);
@@ -84,32 +84,16 @@ class _Board extends Component {
         return (
             <div className='board row'>
                 
-               {this.props.cells.map((cellValue,index)=>(
+               {this.state.cells.map((cellValue,index)=>(
                     <Cell value={cellValue} 
                             id={index} 
-                            onCellClick={this.props.onCellClick} />
+                            onCellClick={this.handleCellClick} />
                ))} 
     
             </div>
         );
     }
 
-}
-
-
-const Board= (props)=>{
-    
-    return (
-        <div className='board row'>
-            
-           {props.cells.map((cellValue,index)=>(
-                <Cell value={cellValue} 
-                        id={index} 
-                        onCellClick={props.onCellClick} />
-           ))} 
-
-        </div>
-    );
 }
 
 
