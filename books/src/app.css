@@ -1,0 +1,33 @@
+
+.theme-primary-color{
+    background-color:darkred;
+}
+
+.footer{
+    text-align:center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:40px;
+    margin-top:10px;
+    color:white;
+    font-weight: bold;
+
+}
+.footer a{
+    color:white;
+}
+
+.screen-container{
+    padding-bottom:40px;
+    margin:5px;
+}
+
+.screen-container h2{
+    font-size:1.5em;
+}
+
+i{
+    margin-right:5px;
+}
