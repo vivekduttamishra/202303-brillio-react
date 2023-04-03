@@ -1,7 +1,7 @@
 import Tags from "./tags.component";
 
 
-const BookDetailsComponent=({book})=>{
+const BookDetailsComponent=({book,onDelete})=>{
 
     if(!book){
         return <p>Please Select a book</p>
@@ -11,7 +11,7 @@ const BookDetailsComponent=({book})=>{
         <div>
             <h2>{book.title}</h2>
             <div className='row'>
-                <div className='col col-md-4' book-cover-div>
+                <div className='col col-md-4 book-cover-div'>
                     <img className='cover-large' src={book.cover} title={book.title} alt={book.title} />
                 </div>
                 <div className='col col-md-4 book-info-div'>
@@ -22,6 +22,11 @@ const BookDetailsComponent=({book})=>{
                         <li><strong>Tags</strong></li>
                     </ul>
                     <Tags tags={book.tags} />
+                    <button className='btn btn-lg btn-danger margin5'
+                            onClick={()=>onDelete(book.id)}
+                    >
+                        <i className="fa-solid fa-trash"></i> Book
+                    </button>
                 </div>
                 
 

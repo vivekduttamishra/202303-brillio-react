@@ -7,7 +7,18 @@ var BookManageScreen = () => {
 
     var [selectedBook, setSelectedBook]=useState(null);
 
-    var books = bookManager.getAllBooks();
+    //var books = bookManager.getAllBooks();
+
+    var [books,updateBookList]=useState(bookManager.getAllBooks());
+
+    const removeBook = id =>{
+        //take all books except one I am trying to delete
+        var remainingBooks = books.filter(b=>b.id!==id);
+
+        updateBookList(remainingBooks);
+        setSelectedBook(null); //now selected book is removed
+
+    }
 
     const selectBook = book => {
         //this.setState({ selectedBook: book });
@@ -32,7 +43,10 @@ var BookManageScreen = () => {
                     />
                 </div>
                 <div className='col col-9'>
-                    <BookDetailsComponent book={selectedBook} />
+                    <BookDetailsComponent 
+                                book={selectedBook} 
+                                onDelete={removeBook}
+                                />
                 </div>
             </div>
         </div>

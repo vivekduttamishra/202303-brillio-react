@@ -17,8 +17,8 @@ const Tags=({tags})=>{
 
     return (
         <div >
-            {tags.map(tag=>(
-            <span style={margin} 
+            {tags.map((tag,index)=>(
+            <span style={margin} key={index}
             className='badge rounded-pill text-bg-secondary' >
                 {tag}
             </span>
