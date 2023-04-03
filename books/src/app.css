@@ -35,3 +35,14 @@ i{
 .book-title-list{
     cursor:pointer;
 }
+
+.cover-large{
+    box-shadow:-4px -4px 4px gray;
+    border:10px solid black;
+    padding:5px;
+    height: 350px;
+}
+
+.book-info-div{
+    padding:50px;
+}
