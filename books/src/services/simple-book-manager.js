@@ -130,6 +130,15 @@ export class SimpleBookManager {
     getAllBooks(){
         return this.books;
     }
+
+    getBookById(id){
+        id=id.toLowerCase();
+        return this.books.find(book => book.id===id);
+    }
+
+    addBook(book){
+        this.books.push(book);
+    }
 }
 
 var bookManager=new SimpleBookManager();

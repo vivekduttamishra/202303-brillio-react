@@ -1,5 +1,5 @@
 
-const BookListComponent=({books,selectedBook, onSelect})=>{
+const BookList=({books,selectedBook, onSelect})=>{
 
     var getItemStyle=(book)=>{
 
@@ -26,4 +26,4 @@ const BookListComponent=({books,selectedBook, onSelect})=>{
     );
 }
 
-export default BookListComponent;
+export default BookList;

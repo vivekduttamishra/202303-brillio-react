@@ -1,7 +1,7 @@
 import Tags from "./tags.component";
 
 
-const BookDetailsComponent=({book,onDelete})=>{
+const BookDetails=({book,onDelete})=>{
 
     if(!book){
         return <p>Please Select a book</p>
@@ -37,4 +37,4 @@ const BookDetailsComponent=({book,onDelete})=>{
     );
 }
 
-export default BookDetailsComponent;
+export default BookDetails;

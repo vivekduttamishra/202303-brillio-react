@@ -1,5 +1,6 @@
 
 import bookManager from '../services/simple-book-manager';
+import BookGrid from '../components/book-grid.component';
 
 const BookListScreen=(props)=>{
 
@@ -9,15 +10,7 @@ const BookListScreen=(props)=>{
         <div>
             <h2>Recommended Books</h2>
             <p>Here is a list of {books.length}  of our favourite books</p>
-
-            <ul>
-                {books.map(book=>(
-                    <li key={book.id}
-                        onClick={()=>console.log(`${book.title} clicked`)}>
-                        {book.title}
-                    </li>
-                ))}
-            </ul>
+            <BookGrid books={books}/>
         </div>
     );
 }
