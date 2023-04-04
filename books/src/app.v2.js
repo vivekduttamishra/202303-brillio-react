@@ -7,14 +7,14 @@ import * as Consts from './consts';
 import { useState } from "react";
 import If from "./components/if.component";
 
-const App = (props) => {
+const App=(props)=>{
 
     //var screen=Consts.SCREEN_BOOK_LIST;
 
     var [screen, navigate] = useState(Consts.SCREEN_BOOK_LIST);
-    var [selectedBook, selectBook] = useState(null);
+    var [selectedBook,selectBook]=useState(null);
 
-    const handleSelectBook = book => {
+    const handleSelectBook=book=>{
         selectBook(book);
         navigate(Consts.SCREEN_BOOK_DETAILS);
     }
@@ -24,23 +24,24 @@ const App = (props) => {
             <NavigationBar title='World Wide Books' onNavigate={navigate} />
             <div className='screen-container'>
 
-                <BookAddScreen 
-                    visible={screen===Consts.SCREEN_BOOK_ADD} 
-                />
+                <If condition={screen===Consts.SCREEN_BOOK_ADD}>
+                <BookAddScreen/>
+                </If>
 
+                <If condition={screen===Consts.SCREEN_BOOK_LIST}>
 
-                <BookListScreen
-                    visible={screen===Consts.SCREEN_BOOK_LIST}
-                    onSelectBook={handleSelectBook}
-                />
-
-                <BookDetailsScreen 
-                    visible={screen===Consts.SCREEN_BOOK_DETAILS}
-                    book={selectedBook} 
+                    <BookListScreen
+                        onSelectBook={handleSelectBook}                        
                     />
-
+                    
+                </If> 
+                
+                <If condition={screen===Consts.SCREEN_BOOK_DETAILS}>
+                    <BookDetailsScreen book={selectedBook}/>
+                </If>
+                
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

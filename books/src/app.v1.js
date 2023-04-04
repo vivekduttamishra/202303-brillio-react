@@ -5,16 +5,15 @@ import BookDetailsScreen from "./screens/book-details-screen";
 import BookAddScreen from "./screens/book-add-screen";
 import * as Consts from './consts';
 import { useState } from "react";
-import If from "./components/if.component";
 
-const App = (props) => {
+const App=(props)=>{
 
     //var screen=Consts.SCREEN_BOOK_LIST;
 
     var [screen, navigate] = useState(Consts.SCREEN_BOOK_LIST);
-    var [selectedBook, selectBook] = useState(null);
+    var [selectedBook,selectBook]=useState(null);
 
-    const handleSelectBook = book => {
+    const handleSelectBook=book=>{
         selectBook(book);
         navigate(Consts.SCREEN_BOOK_DETAILS);
     }
@@ -24,23 +23,20 @@ const App = (props) => {
             <NavigationBar title='World Wide Books' onNavigate={navigate} />
             <div className='screen-container'>
 
-                <BookAddScreen 
-                    visible={screen===Consts.SCREEN_BOOK_ADD} 
-                />
+                {screen===Consts.SCREEN_BOOK_ADD && <BookAddScreen/>}
 
-
-                <BookListScreen
-                    visible={screen===Consts.SCREEN_BOOK_LIST}
-                    onSelectBook={handleSelectBook}
-                />
-
-                <BookDetailsScreen 
-                    visible={screen===Consts.SCREEN_BOOK_DETAILS}
-                    book={selectedBook} 
+                {screen===Consts.SCREEN_BOOK_LIST && 
+                    <BookListScreen
+                        onSelectBook={handleSelectBook}                        
                     />
-
+                    
+                }
+                {screen===Consts.SCREEN_BOOK_DETAILS && 
+                
+                    <BookDetailsScreen book={selectedBook}/>
+                }
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

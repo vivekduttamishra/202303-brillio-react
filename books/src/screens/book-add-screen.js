@@ -1,8 +1,11 @@
+import withBorder from "../hoc/with-border";
+import withVisibility from "../hoc/with-visibility";
+
 
 const BookAddScreen=(props)=>{
 
     return (
-        <div>
+        <div className='book-add-div'>
             <h2> Add New Book</h2>
             <form>
                 <label className='form-label' for='id'>Id</label>
@@ -20,4 +23,6 @@ const BookAddScreen=(props)=>{
     );
 }
 
-export default BookAddScreen;
+
+
+export default withVisibility( withBorder(BookAddScreen));

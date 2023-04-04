@@ -1,10 +1,11 @@
 import bookManager from '../services/simple-book-manager';
 import BookDetails from '../components/book-details.component';
+import withVisibility from '../hoc/with-visibility';
 
 
-const BookDetailsScreen=(props)=>{
+const BookDetailsScreen=({book})=>{
 
-    var book=bookManager.getBookById('the-accursed-god');
+    
 
 
     return (
@@ -12,4 +13,4 @@ const BookDetailsScreen=(props)=>{
     );
 }
 
-export default BookDetailsScreen;
+export default withVisibility( BookDetailsScreen);
