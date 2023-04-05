@@ -23,8 +23,11 @@ const NavigationBar = ({title}) => {
                         </li>
                         <li 
                         className="nav-item" >
-                            <Link className="nav-link active" to="/book/add">
-                                <i className="fa-solid fa-plus"></i>Book</Link>
+
+                            <Link to="/book/add" className="nav-link active" >
+                                <i className="fa-solid fa-plus"></i>Book
+                            </Link>
+                            
                         </li>
                         <li className="nav-item" >
                             <Link className="nav-link active" aria-current="page" to="/author/list">
@@ -46,7 +49,8 @@ const NavigationBar = ({title}) => {
 
                     <ul className="navbar-nav  mb-2 mb-lg-0">
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle active" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Link className="nav-link dropdown-toggle active" 
+                                to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Member
                             </Link>
                             <ul className="dropdown-menu ">

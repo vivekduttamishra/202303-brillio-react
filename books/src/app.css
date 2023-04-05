@@ -55,3 +55,11 @@ i{
     margin:5px;
 }
 
+.book-item, .book-item:hover{
+    text-decoration: none !important;
+    color:black;
+}
+
+.book-item:hover{
+    background-color:lightyellow !important;
+}

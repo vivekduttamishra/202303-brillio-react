@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const BookItem = ({ book,currency="₹" }) => {
 
@@ -25,7 +26,8 @@ const BookItem = ({ book,currency="₹" }) => {
     var description= book.description.length>50?`${book.description.substring(0,50)}...`:book.description;
 
     return (
-        <div className="card " style={cardStyle}>
+        <Link to={`/book/details/${book.id}`} class='book-item' >
+        <div className="card" style={cardStyle}>
             <img src={book.cover} 
                 className="card-img-top" 
                 style={imageStyle} 
@@ -46,6 +48,7 @@ const BookItem = ({ book,currency="₹" }) => {
                     
                 </div>
         </div>
+        </Link>
     );
 }
 
