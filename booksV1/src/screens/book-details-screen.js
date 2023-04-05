@@ -3,9 +3,9 @@ import BookDetails from '../components/book-details.component';
 import withVisibility from '../hoc/with-visibility';
 
 
-const BookDetailsScreen=()=>{
+const BookDetailsScreen=({book})=>{
 
-    var book= bookManager.getBookById('the-accursed-god');
+    
 
 
     return (
