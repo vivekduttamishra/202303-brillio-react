@@ -28,7 +28,7 @@ const Input=({id,  value=null, onValueChange,
                         placeholder={placeholder} 
             />
             <ul className='text-danger'>
-                {error.map(error=><li>{error}</li>)}
+                {error.map((error,id)=><li key={id}>{error}</li>)}
             </ul>
 
         </div>

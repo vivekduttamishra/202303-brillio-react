@@ -1,4 +1,5 @@
 
+import withVisibility from "../hoc/with-visibility";
 import BookItem from "./book-item.component";
 const BookGrid=({books})=>{
 
@@ -13,4 +14,4 @@ const BookGrid=({books})=>{
     );
 }
 
-export default BookGrid;
+export default withVisibility( BookGrid);

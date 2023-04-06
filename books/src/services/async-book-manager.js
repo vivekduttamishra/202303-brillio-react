@@ -139,7 +139,7 @@ export class AsyncBookManager {
     }
 
     async addBook(book){
-        await delay(5000);
+        await delay(2000);
         this.books.push(book);
     }
 }

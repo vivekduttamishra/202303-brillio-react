@@ -1,3 +1,4 @@
+import withVisibility from "../hoc/with-visibility";
 import Tags from "./tags.component";
 
 
@@ -21,7 +22,7 @@ const BookDetails=({book,onDelete})=>{
                         <li><strong>Rating</strong> {book.rating}</li>
                         <li><strong>Tags</strong></li>
                     </ul>
-                    <Tags tags={book.tags} />
+                    {book.tags && <Tags tags={book.tags} />}
                     <button className='btn btn-lg btn-danger margin5'
                             onClick={()=>onDelete(book.id)}
                     >
@@ -37,4 +38,4 @@ const BookDetails=({book,onDelete})=>{
     );
 }
 
-export default BookDetails;
+export default withVisibility( BookDetails);

@@ -23,7 +23,7 @@ const BookItem = ({ book,currency="₹" }) => {
         align:'right'
     }
 
-    var description= book.description.length>50?`${book.description.substring(0,50)}...`:book.description;
+    var description= book.description?.length>50?`${book.description.substring(0,50)}...`:book.description;
 
     return (
         <Link to={`/book/details/${book.id}`} class='book-item' >
