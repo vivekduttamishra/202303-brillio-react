@@ -1,12 +1,24 @@
 
-import bookManager from '../services/simple-book-manager';
 import BookGrid from '../components/book-grid.component';
 import withBorder from '../hoc/with-border';
 import withVisibility from '../hoc/with-visibility';
 
+import bookManager from '../services/async-book-manager';
+
+import { useEffect } from 'react';
+
 const BookListScreen=()=>{
 
-    var books= bookManager.getAllBooks();
+    useEffect(() => {
+        console.log('use effect called for BookListScreen');
+    });
+
+    console.log('book list screen main body render');
+
+    //var books= bookManager.getAllBooks();
+    var books=[];
+    console.log('books',books);
+    
 
     return (
         <div>
